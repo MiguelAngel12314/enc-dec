@@ -1,0 +1,94 @@
+$text-white: #a5a5a5;
+
+span {
+    overflow-wrap: anywhere;
+}
+
+.title {
+    color: #bababa;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.subtitle {
+    color: $text-white;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    /* Si no lo quieres centrado verticalmente, solo arriba */
+}
+
+.card-dictado {
+    width: 100%;
+    max-width: 400px;
+    background-color: black;
+}
+mat-form-field {
+    width: 100%;
+}
+
+:host ::ng-deep .mat-mdc-text-field-wrapper {
+    background-color: black !important;
+    /* Un gris azulado suave */
+    border-radius: 12px 12px 0 0;
+    /* Bordes más redondeados */
+}
+
+:host ::ng-deep .mdc-line-ripple::after {
+    border-bottom-color: $text-white !important;
+}
+
+:host ::ng-deep .mdc-line-ripple::before {
+    border-bottom-color: $text-white !important;
+}
+.mdc-text-field {
+    background-color: black !important;
+}
+mat-label, mat-hint {
+    color: $text-white;
+}
+input {
+    color: $text-white !important;
+}
+
+.paragraph {
+    color: $text-white;
+}
+
+.mic {
+    color: $text-white
+}
+
+img {
+    width: 100%;
+}
+
+.example-button-row {
+    max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.send {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    background: #bababa !important;
+    color: #ffffffa6 !important;
+}
+
+.link-text {
+    color: rgb(51 28 227);
+    cursor: pointer;
+    text-decoration: underline;
+}

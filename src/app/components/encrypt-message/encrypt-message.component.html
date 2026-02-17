@@ -1,0 +1,27 @@
+<main class="main">
+    <div class="main-wrapper">
+        <mat-card class="card-dictado">
+            <mat-card-content>
+                <!-- Aquí va tu input y el botón de micrófono -->
+                 <img src="assets/img/hello_pwa.gif">
+                <h1 class="title">¡Te damos la bienvenida a Banco Azteca!</h1>
+                <p class="subtitle">Usa tu prestamo como dinero en efectivo o compras en donde quieras</p>
+                <p class="paragraph">¿Como prefieres que te llamemos?</p>
+                <mat-form-field>
+                    <mat-label>Escribe tu nombre</mat-label>
+                    <input type="text" matInput #message [value]="talk()" [ngModel]="talk()" (ngModelChange)="talk.set($event)"
+                        maxlength="15" disabled>
+                    <mat-hint align="end">{{message.value.length}} / 15 caracteres</mat-hint>
+                    <button type="button" class="mic" matSuffix mat-icon-button (click)="toggleMic()">
+                        <mat-icon>{{ isRecording() ? 'mic' : 'mic_none' }}</mat-icon>
+                    </button>
+                </mat-form-field>
+                @if(enc_message()) {
+                    <span class="paragraph">Tu texto encriptado es: {{enc_message()}}</span><br>
+                    <span (click)="openModal()" class="link-text">¿Quieres desencriptarlo?</span>
+                }
+                <button type="button" class="send" mat-flat-button (click)="sendMessage()" [disabled]="talk().length === 0">Enviar</button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</main>
