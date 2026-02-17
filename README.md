@@ -27,15 +27,15 @@ src/
 
 1. Clonar el repositorio:
 ```bash
-git clone
+git clone https://github.com/MiguelAngel12314/enc-dec.git
 ```
 2. Abrir proyecto:
 ```bash
-cd enc-server
+cd enc-dec
 ```
 3. Cambiar de branch:
 ```bash
-git checkout development
+git checkout enc-dec-server
 ```
 
 ## Instalación
