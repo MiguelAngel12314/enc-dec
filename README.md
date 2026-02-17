@@ -1,27 +1,80 @@
-# EncDecFront
+# Pagina web de Encriptación/Desencriptación
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Pagina web para encriptado y desencriptado de texto.
 
-## Development server
+## Estructura del Proyecto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```
+enc-dec-front/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── decrypt-message/ #Vista para desencriptar la informaciòn
+│   │   │   │   ├── decrypt-message.component.html
+│   │   │   │   ├── decrypt-message.component.scss
+│   │   │   │   ├── decrypt-message.component.spec.ts
+│   │   │   │   └── decrypt-message.component.ts
+│   │   │   └── encrypt-message/ #Vista para encriptar la informaciòn
+│   │   │       ├── encrypt-message.component.html
+│   │   │       ├── encrypt-message.component.scss
+│   │   │       └── encrypt-message.component.ts
+│   │   ├── core/
+│   │   │   ├── domain/
+│   │   │   │   ├── models/ # Contiene las interfaces
+│   │   │   │   │   ├── decrypt-message.model.ts
+│   │   │   │   │   └── message.model.ts
+│   │   │   │   └── repository/ #  Conexion entre el servicio y los casos de uso
+│   │   │   │       ├── decrypt-message.repository.ts
+│   │   │   │       └── message.repository.ts
+│   │   │   └── infrastructure/
+│   │   │       └── api/ #Servicios para encriptar y desencriptar
+│   │   │           ├── decrypt-message-http.repository.ts
+│   │   │           └── message-http.repository.ts
+│   │   ├── use-cases/ #Casos de uso
+│   │   │   ├── send-encrypt-message.usecase.ts
+│   │   │   └── send-message.usecase.ts
+│   │   ├── shared/
+│   │   │   └── models/ #Interfaces de las vistas
+│   │   │       ├── decrypt-http-message.model.ts
+│   │   │       └── DialogData.model.ts
+│   │   ├── app.component.html #Componente principal
+│   │   ├── app.component.scss
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   └── app.routes.ts
+│   ├── assets/
+│   │   └── img/
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.scss
+```
 
-## Code scaffolding
+## Descargar
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/MiguelAngel12314/enc-dec.git
+```
+2. Abrir proyecto:
+```bash
+cd enc-dec
+```
+3. Cambiar de branch:
+```bash
+git checkout enc-dec-front
+```
 
-## Build
+## Instalación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Instalar dependencias:
+```bash
+npm install
+```
 
-## Running unit tests
+## Desarrollo
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ejecutar servidor en modo desarrollo:
+```bash
+ng serve
+```
