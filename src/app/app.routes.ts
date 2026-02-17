@@ -7,8 +7,5 @@ export const routes: Routes = [
         path: 'encrypt',
         component: EncryptMessageComponent
     },
-    {
-        path: 'decrypt',
-        component: DecryptMessageComponent
-    }
+    { path: '', redirectTo: 'encrypt', pathMatch: 'full' },
 ];
