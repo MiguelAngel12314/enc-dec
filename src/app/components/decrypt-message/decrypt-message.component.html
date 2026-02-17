@@ -1,0 +1,16 @@
+<main class="main">
+    <mat-dialog-content>
+        <p>Tu texto encriptado es:</p>
+        <p class="wrap-message">{{data.encryptedMessage}}</p>
+
+        @if(isDecrypted()) {
+            <p>Tu texto desencriptado es:</p>
+            <p class="wrap-message">{{decrytedMessage()}}</p>
+        }
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button type="button" mat-button>Cerrar</button>
+        <button type="button" mat-button color="primary" (click)="decryptMessage()">Desencriptar</button>
+    </mat-dialog-actions>
+
+</main>
